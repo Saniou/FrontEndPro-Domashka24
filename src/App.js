@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
+import Navbar from './components/Navbar';
+import { FaBars } from 'react-icons/fa';
+import VideoComp from './components/VideoComp';
 
 function App() {
+  const [ showNav, setShowNav] = useState
+  (false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header>
+        <h1>CONTENT TITLE</h1>
+        <FaBars onClick={() => setShowNav(!showNav)} />
+        </header>
+      <Navbar show = {showNav} />
+      <VideoComp>
+      <video src="./video/video1.mp4" autoPlay loop muted />
+      </VideoComp>
     </div>
   );
 }
