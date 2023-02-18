@@ -6,6 +6,7 @@ body{
   padding: 0;
   font-family: 'Roboto', sans-serif;
   color: #000;
+  background: #000;
 }
 
 header{
@@ -27,7 +28,7 @@ header h1{
   width: 240px;
   background: #000;
   position: absolute;
-  height: 95vh;
+  height: 100.5vh;
   padding: 0 30px;
   left: -100%;
   transition: all 0.8s;
@@ -80,7 +81,30 @@ header svg {
 }
 
 video{
-  width: 120%;
-  height: 120%;
+  position:absolute;
+  z-index: -1;
+  width: 110%;
+  height: 110%;
   object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.video-containers h1{
+  z-index: 1;
+  font-size: 40px;
+  left: 40%;
+  color: aliceblue;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+}
+
+.video-containers p{
+  z-index: 1;
+  font-size: 24px;
+  left: 41%;
+  color: aliceblue;
+  position: absolute;
+  top: 50%;
+  text-align: center;
 }
